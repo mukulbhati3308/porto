@@ -1,0 +1,993 @@
+`
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/54e73dd607.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Rubik:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" media="screen and (max-width: 800px)" href="tablet.css">
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: bisque;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        box-sizing: border-box;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        height: 840px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        overflow-x: hidden;
+    }
+
+    #home::before {
+        content: "";
+        background: url(img/WhatsApp\ Image\ 2023-09-20\ at\ 4.20.38\ PM.jpeg) no-repeat center center/cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        overflow-x: hidden;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        height: 900px;
+        z-index: -1;
+        opacity: .8;
+    }
+
+    .navbar {
+        width: 80%;
+        justify-content: center;
+        display: flex;
+        font-size: x-large;
+        align-items: center;
+
+        position: sticky;
+        top: 0;
+    }
+
+    .navbar ul {
+        display: flex;
+        font-size: 18 px;
+        list-style: none;
+        margin: 20px 0px;
+        cursor: pointer;
+    }
+
+    .navbar ul li {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 8px 20px;
+        transition: all .5s ease;
+    }
+
+    .navbar ul li a:hover {
+        background-color: white;
+
+        color: rgb(48, 108, 64);
+        box-shadow: 0 0 10px white;
+    }
+
+    .btn {
+        font-family: 'PT Serif', serif;
+
+        background-color: rgb(48, 162, 190);
+        color: rgb(12, 12, 12);
+        padding: 4px 12px;
+        font-size: 15px;
+        border: 2px solid grey;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        cursor: pointer;
+        border: rgb(200, 174, 174);
+    }
+
+    .search {
+        float: right;
+        color: rgb(12, 12, 12);
+        padding: 0px -16px;
+        margin: 4px 0px;
+        border-radius: 6px;
+    }
+
+    input[type="text" i] {
+        padding: 2px 10px;
+        padding-top: 0px;
+    }
+
+    .info {
+        /*  background-color: rgb(147, 48, 48);  */
+        height: auto;
+        width: 68vw;
+        margin: 30px auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: -2%;
+    }
+
+    .information {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 30%;
+        left: 30%;
+    }
+
+    .hello {
+        font-size: 50px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(91, 48, 152);
+        margin-bottom: 20px;
+    }
+
+    .name {
+
+        font-size: 45px;
+        font-weight: 800;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(148, 148, 52);
+    }
+
+    .myself {
+        line-height: 22px;
+        font-size: 28px;
+        color: red;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .aboutmore {
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 18px;
+        border-radius: 10px;
+        background-color: rgb(160, 143, 203);
+        font-weight: bold;
+        font-size: 20px;
+        margin: 30px 0px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: rgb(146, 117, 117);
+    }
+
+    ------------skills------------- #skills {
+        background: rgb(131, 115, 95);
+        width: 100%;
+    }
+
+    #skills {
+        width: 100%;
+        background-color: rgb(131, 115, 95);
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        padding: 40px 0px;
+    }
+
+    .about-text h1 {
+        padding: 2px 0;
+        margin: 2px 0;
+        color: black;
+        font-size: 22px;
+        font-weight: 700;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        box-sizing: border-box;
+        align-items: right;
+    }
+
+    h2 {
+        padding: 2px 0;
+        margin: 2px 0;
+        color: black;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+
+    .about-text {
+        width: 100%;
+        background-color: rgb(131, 115, 95);
+    }
+
+    .main {
+        background-color: rgb(131, 115, 95);
+        width: 1000px;
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .about-text h {
+        padding: 0px;
+        margin: 2px;
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        text-transform: capitalize;
+
+    }
+
+    .about-text p {
+        padding: 0px;
+        margin: 4px;
+        color: rgb(16, 16, 22);
+        line-height: 28px;
+        font-size: 16px;
+        font-weight: 800;
+
+    }
+
+    .skillcontainer {
+        color: black;
+        padding: 12px;
+    }
+
+    .skillitem {
+        padding: 4px;
+        margin: 2px;
+        display: flex;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+    }
+
+    .skill {
+        width: 275px;
+        height: 8px;
+        background-color: red;
+        border: 2px solid black;
+    }
+
+    .x1 {
+        width: 275px;
+        background-color: rgb(136, 50, 16);
+        margin: 2px;
+    }
+
+    .x2 {
+        width: 260px;
+        background-color: rgb(103, 78, 129);
+        margin: 2px;
+    }
+
+    .x3 {
+        width: 200px;
+        background-color: rgb(61, 45, 234);
+        margin: 2px;
+    }
+
+    .x4 {
+        width: 220px;
+        background-color: rgb(159, 133, 95);
+        margin: 2px;
+    }
+
+    .x5 {
+        width: 265px;
+        background-color: rgb(85, 74, 58);
+        margin: 2px;
+    }
+
+
+    #services {
+        background-color: bisque;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .row1 {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 400px;
+        border: 1px solid black;
+        margin: 10px;
+        align-items: center;
+        text-align: justify;
+        padding: 10px;
+        border-radius: 15px;
+        background: linear-gradient(to top, rgb(255, 45, 45), white 50%);
+        background-size: 100% 200%;
+        transition: all.8s;
+    }
+
+    .box:hover {
+        background-position: left bottom;
+        color: white;
+        border: none;
+        box-shadow: 0 0 20px rgb(255, 45, 45);
+    }
+
+    .box i {
+        height: 80px;
+        width: 80px;
+        font-size: 40px;
+        margin-bottom: 10px;
+        color: rgb(42, 42, 103);
+    }
+
+
+
+    -----contact us ----------------- #contact us {
+        background-color: bisque;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Rubik', sans-serif;
+
+    }
+
+    .mai H1 {
+        padding: 12px;
+        margin: 18px;
+        font-size: 18px;
+        font-weight: 800;
+        color: rgb(9, 7, 7);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+    }
+
+    .mai h3 {
+        font-size: 18px;
+    }
+
+    .mai {
+        height: 400px;
+        flex-basis: 400px;
+        width: 100%;
+        height: auto;
+        background-color: bisque;
+    }
+
+    .mai h2 {
+        font-size: 24px;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-bottom: 8px solid rgb(63, 9, 114);
+    }
+
+    .mai form {
+        margin: auto;
+        padding: 15px;
+        margin-left: 70px;
+        width: 90%;
+    }
+
+    .form-outer {
+        width: 40%;
+        border-bottom: 2px solid rgb(63, 9, 114);
+        margin: 22px;
+    }
+
+    .form-outer label {
+        color: black;
+        font-weight: 800;
+    }
+
+    .form-outer input {
+        width: 60%;
+        padding: 4px;
+        font-size: 14px;
+        border: none;
+        text-align: center;
+        margin: 6px;
+        outline: none;
+        color: rgb(4, 3, 3);
+        border-radius: 4px;
+        background: none;
+    }
+
+    .form-outer i {
+        width: 18%;
+        text-align: left;
+        color: rgb(10, 8, 8);
+
+    }
+
+    select {
+        color: rgb(7, 7, 8);
+        width: 50%;
+        margin: 8px 0px;
+        padding: 12px 20px;
+        border-radius: 6px;
+        background-color: rgb(215, 206, 206);
+    }
+
+    .form-outer1 button {
+        background: none;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        outline: none;
+        width: 30%;
+        padding: 10px 0px;
+        font-weight: bolder;
+        border-radius: 10px;
+        margin: 22px;
+        padding: 10px;
+        border: 2px solid rgb(63, 9, 114);
+    }
+
+    .form-outer1 button:hover {
+        color: rgb(159, 22, 22);
+    }
+
+    ---------------about us ----------------- #about {
+        background-color: rgb(131, 115, 95);
+        height: auto;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Rubik', sans-serif;
+
+    }
+
+    #about {
+        background-color: rgb(131, 115, 95);
+        margin: 4px;
+        width: 100%;
+        height: auto;
+        padding: 100px 0px;
+
+    }
+
+    #about img {
+        height: 360px;
+        width: 340px;
+        border-radius: 70px;
+        margin-left: 150px;
+    }
+
+    .about-text1 {
+        width: 100%;
+    }
+
+    .main1 {
+        background-color: rgb(131, 115, 95);
+        max-width: 90%;
+        margin-top: 2px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .about-text1 h1 {
+        padding: 0px;
+        margin: 24px;
+        color: black;
+        font-size: 24px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+
+    .about-text1 p {
+
+        padding: 0px;
+        margin: 24px;
+        color: rgb(16, 16, 22);
+        line-height: 28px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 45px;
+    }
+
+    .contain {
+        max-width: 1170px;
+        margin: auto;
+        color: black;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .footer {
+        margin-top: auto;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        bottom: 30%;
+    }
+
+    .footer-col {
+        width: 25%;
+        padding: 0 15px;
+    }
+
+    .footer-col h4 {
+        font-size: 16px;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        font-weight: bold;
+        color: white;
+        position: relative;
+    }
+
+    .footer-col h4::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        height: 2px;
+        background-color: rgb(146, 46, 46);
+        box-sizing: border-box;
+        width: 40%;
+    }
+
+    .footer-col ul li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+        font-size: 14px;
+        text-transform: capitalize;
+        text-decoration: none;
+        font-weight: 300;
+        display: block;
+        color: white;
+        transition: all .3s ease;
+    }
+
+    .footer-col ul li a:hover {
+        color: #711010;
+        padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+
+    }
+
+    .social-links ul li .fa {
+        font-size: 25px;
+        line-height: 60px;
+        transition: .3s;
+        text-align: center;
+        color: blue;
+    }
+
+
+    .social-links ul li .fa-brands:hover {
+        color: rgb(252, 246, 246);
+
+    }
+
+    .social-links ul li a {
+        position: relative;
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 60%;
+        color: white;
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2);
+    }
+
+
+    .social-links ul li a:hover {
+        transform: translate(0, -15%);
+    }
+
+    .social-links ul li:nth-child(1) a:hover {
+        background-color: rgb(181, 36, 36);
+    }
+
+    .social-links ul li:nth-child(2) a:hover {
+        background-color: rgb(52, 181, 52);
+    }
+
+    .social-links ul li:nth-child(3) a:hover {
+        background-color: rgb(7, 89, 183);
+    }
+
+    .social-links ul li:nth-child(4) a:hover {
+        background-color: rgb(45, 15, 134);
+    }
+
+    .social-links ul li:nth-child(5) a:hover {
+        background-color: rgb(68, 92, 213);
+    }
+
+    @media screen and (max-width: 950px) {
+        
+#home{
+    overflow-x: hidden;
+}
+        .hello {
+            font-size: 44px;
+        }
+
+        .name {
+            font-size: 32px;
+        }
+
+        .myself {
+            font-size: 23px;
+        }
+
+        .aboutmore {
+            font-size: 20px;
+        }
+
+        .buttons {
+            margin: 20px;
+            display: flex;
+        }
+
+        .information {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 30%;
+        left: 10%;
+    }
+
+        nav {
+            display: contents;
+            width: 99%;
+            margin: auto;
+            padding: 20px 0;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar ul {
+        display: contents;
+        font-size: 16 px;
+        list-style: none;
+        margin: 16px 0px;
+        cursor: pointer;
+    }
+
+        .pic img {
+
+            height: 360px;
+            width: 320px;
+            margin-top: 5%;
+            padding: -12px 167px;
+            border-radius: 80px;
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        #about img {
+            display: none;
+        }
+
+        #services {
+            .navbar ul li a {
+                text-decoration: none;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 8px 20px;
+                transition: all .5s ease;
+            }
+        }
+</style>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li class="active"> <i class="fa-solid fa-house"><a href=""> Home</i></a></li>
+            <li><a href="#skills"> Skills </a></li>
+
+            <li> <a href="#services"> Services</a></li>
+            <li><a href="#about"> About </a></li>
+            <li><a href="#contact us"> Contact </a></li>
+            <li><a href="LOGIN.HTML"> Sign Up</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="info">
+            <div class="information">
+                <div class="hello">Hello I am </div>
+                <div class="name">Mukul Kumar Bhati </div>
+                <div class="myself ">Developer, Entrepreneur </div>
+                <div class="aboutmore "> I am a B.Tech CSE Student and I love to learn coding.<br> Now I
+                    Complete my web developing course. </div>
+
+                <div class="buttons">
+                    <a href="CV.TXT.pdf" target="blank"><button class="btn"> Download CV</button></a>
+                    <a href="https://www.linkedin.com/in/mukul-kumar-bhati-220928248" target="blank"><button
+                            class="btn"> Let's talk></button></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="skills">
+
+        <div class="main">
+
+            <div class="about-text">
+                <h1> Skills</h1>
+                <p>
+
+                    My journey started when I was studying to solve the problems and start to doing some small
+                    projects, where I learn web developer course.<br>
+                    I am a front end web developer. I can provide clean code and pixel perfect design. I also make the
+                    website more & more interactive with web animations. There's this notion that grow a business, you
+                    have to be ruthless. But we know there's a better way to grow. We're optimistic for a future where
+                    people live healthier, more informed, more creative lives.
+                </p>
+
+
+                <h2> My Skills</h2>
+                <div class="skillcontainer">
+                    <div class="skillitem"> HTML: <div class="skill x1"> </div>
+                    </div>
+                    <div class="skillitem"> CSS: <div class="skill x2"> </div>
+                    </div>
+                    <div class="skillitem"> Javascript: <div class="skill x3"> </div>
+                    </div>
+                    <div class="skillitem"> Php: <div class="skill x4"> </div>
+                    </div>
+                    <div class="skillitem"> Python: <div class="skill x5"> </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h1 class="headings">Services</h1>
+        <div class="row1">
+            <div class="box">
+                <i class="fa-solid fa-pen"></i>
+                <h1 class="headings">Website Design</h1>
+                <p>Process of planning and implementing the plan for design a website 
+                    It includes aspects such as web design, web publishing, web programming, and database management. It is the creation of an application that works over the internet i.e. websites.
+                </p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-laptop"></i>
+                <h1 class="headings">Web Development</h1>
+                <p>Creating ,building and maintaining websites and web applications that run online in browser.
+                    Web design is the creation of websites and pages to reflect a company's brand and information and ensure a user-friendly experience
+                </p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-headset"></i>
+                <h1 class="headings">24/7</h1>
+                <p>We will help you ,it happens all the time without ever stopping
+                24 hours a day, seven days a week
+                </p>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <div class="main1">
+
+            <img src="img/IMG_20220810_223243_945.jpg" alt="description">
+
+            <div class="about-text1">
+                <h> About Me</h>
+                <p>
+                    My name is Mukul Kumar Bhati and I'm a B.Tech CSE Student of Galgotias University in Distict
+                    Gautam
+                    Budh Nagar.
+                    My journey started when I was studying to solve the problems and starting to doing some
+                    small
+                    projects, where I learn web developer course.<br>
+                    I am a front end web developer. I can provide clean code and I also make the website more &
+                    more
+                    interactive with web animations. There's this notion that grow a business, you have to be
+                    ruthless.
+                    But we know there's a better way to grow.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact us">
+        <div class="mai">
+            <h1>
+                Contact me for work / General Enquiries
+            </h1>
+
+            <form method="post" id="form">
+                <div id="res" style="color: rgb(64, 209, 16); font-size: 13px;"> </div>
+                <div class="form-outer">
+                    <i class="fa-solid fa-user"></i>
+                    <label> Enter Your Name</label>
+                    <input type="text" name="name">
+                </div>
+
+                <div class="form-outer">
+                    <i class="fa-solid fa-envelope"></i>
+                    <label> Enter Your Email</label>
+                    <input type="text" name="email">
+                </div>
+
+
+                <div class="form-outer">
+                    <i class="fa-solid fa-phone"></i>
+                    <label> Enter Your Password</label>
+                    <input type="text" name="password">
+                </div>
+
+                <div class="form-outer">
+                    <i class="fa-solid fa-envelope"></i>
+                    <label> Enquiry</label>
+                    <BR>
+                    <input type="text" name="enquiry">
+                </div>
+
+                <select name="degree">
+                    <option value="not selected">Select Your Course </option>
+                    <option>BTech</option>
+                    <option>BSc </option>
+                    <option> BCA</option>
+                    <option> BBA </option>
+                    <option> MBA</option>
+
+                </select>
+                <BR>
+
+                <h3>Select your Gender</h3>
+                Male <input type="radio" value="male"><br>
+                Female <input type="radio" value="male"><br>
+                Others <input type="radio" value="male"><br>
+
+                <div class="form-outer1">
+                    <button name="btn">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="contain">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li> <a href="index.html"> HomePage</a> </li>
+                        <li> <a href="about us.html">Abouts Us</a></li>
+                        <li> <a href="service.html">Services</a></li>
+                        <li> <a href="https://www.similarweb.com/corp/legal/privacy-policy/">Privacy Policy</a></li>
+                        <li> <a href="contact us.html">Contact </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li> <a href="https://learntocodewith.me/faq/">FAQ</a></li>
+                        <li> <a href="https://www.zendesk.com/in/service/help-center/">Help Center</a></li>
+                        <li> <a
+                                href="https://www.zendesk.com/in/service/help-center/#onetrust-show-cookie-settings">Cookies</a>
+                        </li>
+                        <li> <a href="https://www.shopify.com/pricing">Pricing</a></li>
+                        <li> <a href="https://www.shopify.com/legal/terms">Term of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4> Online Service</h4>
+                    <ul>
+                        <li> <a href="#">Projects</a></li>
+                        <li> <a href="#">Resume Templates</a></li>
+                        <li> <a href="#">CV Templates</a></li>
+                        <li> <a href="#">Create Resume</a></li>
+                        <li> <a href="#">Create CV</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col">
+                    <div class="social-links" </div>
+                        <h4>Follow Us</h4>
+                        <ul>
+                            <li> <a href="https://www.instagram.com/_mukul.bhati/" target="_blank"> <i
+                                        class="fa-brands fa-instagram fa-2x"></i> </a></li>
+                            <li> <a href="https://whatsapp.com/dl/" target="_blank"> <i
+                                        class="fa-brands fa-whatsapp fa-2x "></i> </a>
+                            </li>
+
+                            <li> <a href="https://www.linkedin.com/in/mukul-kumar-bhati-220928248" target="_blank"> <i
+                                        class="fa-brands fa-linkedin-in fa-2x "></i></a></li>
+
+                            <li> <a href="https://www.facebook.com/profile.php?id=100052136683508" target="_blank"> <i
+                                        class="fa-brands fa-facebook fa-2x "></i></a></li>
+                            <li> <a href="https://twitter.com/mukulbhati_?t=nRMf3SkYDZnaxI7uNaaR5Q&s=09"
+                                    target="_blank"><i class="fa-brands fa-twitter fa-2x "></i> </a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        let url = 'https://script.google.com/macros/s/AKfycbyR754pSkOqaD59eQivSWbTQqHfDHwLi3ZEgp0G0SK5y22eNUnKXkMOsZsv8SKA9sbQ5Q/exec'
+
+        let form = document.querySelector('#form');
+        form.addEventListener("submit", (e) => {
+            e.target.btn.innerHTML = "Submitting....";
+            let d = new FormData(form);
+            fetch(url, {
+                method: "POST",
+                body: d
+            }).then((res) => res.text())
+                .then((finalRes) => {
+                    e.target.btn.innerHTML = 'submit';
+                    document.getElementById("res").innerHTML = finalRes;
+                    form.reset();
+                    setTimeout(() => {
+                        document.getElementById("res").innerHTML = '';
+                    }, 5000);
+
+                })
+            e.preventDefault();
+        })
+    </script>
+
+
+
+</body>
+
+</html>
